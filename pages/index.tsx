@@ -1,15 +1,30 @@
+import HotelListApi from '@hotel/HotelListApi'
 import Link from 'next/link'
+import { useEffect } from 'react'
 import Layout from '../components/Layout'
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+const IndexPage = () => {
+
+
+  const getAllData = async () =>{
+    const data = await HotelListApi.findAllHotels()
+    console.log(data,'//')
+  }
+
+  useEffect(()=>{
+    getAllData()
+  },[])
+  
+  return(
+    <div>
+        this is Home page
+    </div>
+  )
+
+
+}
+
+    
+
 
 export default IndexPage
