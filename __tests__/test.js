@@ -26,5 +26,9 @@ test('the data is peanut butter', async() => {
   console.log(keyify(hotelSample))
    const req =5
    const res =5
-    expect(keyify(data[0])).toContain(keyify(hotelSample))
+    expect(keyify(data[0])).toBe(keyify(hotelSample))
+  })
+
+  test("test jest",()=>{
+    expect(8).toBe(8)
   })

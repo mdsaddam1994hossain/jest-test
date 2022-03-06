@@ -1,6 +1,6 @@
 
 import axios from "axios"
-import { clientApiWithoutToken } from './../api';
+import { clientApiWithoutToken } from '../../api/api';
 
 
 const findAllHotels = async () => {
